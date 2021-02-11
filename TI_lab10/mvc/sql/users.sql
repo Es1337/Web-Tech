@@ -1,0 +1,1 @@
+create table users ( username char(50), pass char(50)) ;

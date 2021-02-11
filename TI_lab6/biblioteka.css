@@ -1,0 +1,37 @@
+table {
+  background-color: #e5ffe2;
+}
+
+table thead {
+  background-color: #fa9790;
+}
+
+table tbody tr:nth-child(1) {
+  color: black;
+}
+
+table th {
+  text-align: center;
+  width: 33%;
+}
+
+table td {
+  width: 33%;
+}
+
+a {
+  margin: 0px 2px 0px 2px;
+}
+
+.historyczne {
+  color: #0d8c24;
+}
+
+.albumy {
+  color: #0f45a8;
+}
+
+.reportaze {
+  color: #8b3312;
+}
+/*# sourceMappingURL=biblioteka.css.map */

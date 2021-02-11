@@ -1,0 +1,69 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Test CGI</title>
+    <script type="text/javascript">
+        function validate() {
+            if(!namecheck() || !yearcheck()) {
+                alert("Dane źle wprowadzone")
+                return false;
+            }
+            else
+                alert("Nazwisko: " + document.inputform.surname.value
+                      + "\nImię: " + document.inputform.name.value
+                      + "\nE-mail: " + document.inputform.email.value
+                      + "\nRok studiów: " + document.inputform.year.value
+                      + "\nUwagi: " + document.inputform.comments.value)
+                return true;
+        }
+
+        function namecheck() {
+            var name = document.inputform.name.value;
+            var surname = document.inputform.surname.value;
+            if(name.length >= 4 && surname.length >= 4)
+            {
+                return true;
+            }
+            else 
+                return false; 
+        }
+        
+        function yearcheck() {
+            var year = document.inputform.year.value;
+            if(year == 0)
+            {
+                return false;
+            }
+            else    
+                return true;
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <form name="inputform" method="post" onsubmit="return validate()">
+            <label for="surname">Nazwisko</label>
+            <input type="text" name="surname">
+            <br> 
+            <label for="name">Imię</label>
+            <input type="text" name="name">
+            <br> 
+            <label for="email">E-Mail</label>
+            <input type="email" name="email" required>
+            <br>
+            <label for="year">Rok studiów</label>
+            <select name="year">
+                <option value="0">Wybierz rok</option>
+                <option value="1">Rok 1</option>
+                <option value="2">Rok 2</option>
+                <option value="3">Rok 3</option>
+            </select>
+            <br>
+            <label for="comments">Uwagi</label>
+            <input type="textarea" name="comments">
+            <br>  
+            <input class="submit-btn" type="submit"> 
+        </form> 
+    </fieldset> 
+</body> 
+</html>

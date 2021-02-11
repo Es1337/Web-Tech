@@ -1,0 +1,15 @@
+include head.pug
+
+<div id="content">
+	<section>
+		<h3>Wykres</h3>
+		<button type="button" id="draw_chart">Rysuj</button>
+		<div class="wrapper">
+			<p>Wykres poziomu wody w czasie</p>
+			<div style="float: left;"> [cm]</div>
+			<canvas id="chart" width="800" height="400"></canvas>
+		</div>
+	</section>
+</div>
+
+include footer.pug

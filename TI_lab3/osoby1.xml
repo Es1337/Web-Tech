@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="osoby1.xsl"?>
+<dane>
+    <osoba rodzaj="uczen">
+    <imie>Karol</imie>
+    <nazwisko>Jonacki</nazwisko>
+    <miasto>Krakow</miasto>
+    <wiek>12</wiek>
+    </osoba>
+    <osoba rodzaj="nauczyciel">
+    <imie>Anna</imie>
+    <nazwisko>Abacka</nazwisko>
+    <miasto>Warszawa</miasto>
+    <wiek>22</wiek>
+    </osoba>
+    <osoba rodzaj="uczen">
+    <imie>Karolina</imie>
+    <nazwisko>Abacka</nazwisko>
+    <miasto>Krakow</miasto>
+    <wiek>10</wiek>
+    </osoba>
+    <osoba rodzaj="nauczyciel">
+    <imie>Jan</imie>
+    <nazwisko>Babacki</nazwisko>
+    <miasto>Krakow</miasto>
+    <wiek>30</wiek>
+    </osoba>
+    <osoba rodzaj="uczen">
+    <imie>Karol</imie>
+    <nazwisko>Dadacki</nazwisko>
+    <miasto>Krakow</miasto>
+    <wiek>10</wiek>
+    </osoba>
+    </dane>

@@ -1,0 +1,43 @@
+biblioteka {
+    position: absolute;
+    top: 5em;
+    left: 5em;
+}
+
+dzial {
+	margin: 5px;
+	border-style: double;
+	border-width: 2px;
+	border-color: black;
+	display: block;
+	width: 500px;
+	padding: 5px;
+}
+
+ksiazka { 
+	display: block;
+	padding: 8px;
+	margin: 5px;
+	border: 1px solid gray;
+	background-color: aliceblue;
+}
+ksiazka:nth-child(even) {
+	background-color: yellow;
+}
+ksiazka:nth-child(even) cena {
+	color: black;
+}
+
+autor {
+    color: green;
+}
+tytul {
+    margin-left: 0.7rem;
+	color: red;
+	text-decoration: underline;
+}
+cena {
+    margin-left: 0.7rem;
+	color: blue;
+	font-style: italic;
+}

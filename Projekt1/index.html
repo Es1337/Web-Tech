@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <meta charset="UTF-8">
+        <title>
+            Projekt 1
+        </title>
+        <script type="text/javascript" src="julia.js"></script>
+        <script type="text/javascript" src="mandelbrot.js"></script> 
+        <script type="text/javascript" src="sierpinski.js"></script> 
+        <script type="text/javascript">
+            function switchDisplay() {
+                var val = document.getElementById('fractal').value;
+                if(val == 'mb') {
+                    document.getElementById('mb').style.display = 'inline';
+                    document.getElementById('j').style.display = 'none';
+                    document.getElementById('s').style.display = 'none';
+                }
+                else if(val == 'j') {
+                    document.getElementById('mb').style.display = 'none';
+                    document.getElementById('j').style.display = 'inline';
+                    document.getElementById('s').style.display = 'none';
+                }
+                else if(val == 's') {
+                    document.getElementById('mb').style.display = 'none';
+                    document.getElementById('j').style.display = 'none';
+                    document.getElementById('s').style.display = 'inline';
+                }
+            }
+        </script> 
+    </head>
+    <body>
+        <img id="bg" src="bg.jpg">
+        <div class="row">
+            <div class="col-3" style="text-align: left;">
+                <span id="doc"><a href="doc.html">Dokumentacja</a></span>
+            </div>
+            <div class="col-3">
+                <h1>Prezentacja animacji fraktali</h1>
+                <h4><em>Michał Kuś</em></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <form name="controls" method="get" action="#">
+                    <div class="col-3 content">
+                        <label for="lad-select">Wybierz fraktal: </label>
+                        <select type="text" id="fractal" name="fractal" onchange="switchDisplay();">
+                            <option value="s">Sierpinski</option>
+                            <option value="mb">Mandelbrot</option>
+                            <option value="j">Julia</option>
+                        </select><br><br>
+                        <span>ZATRZYMAJ ANIMACJĘ PRZED WYBRANIEM NOWEJ</span>
+                        <br>
+                        <span>Jeśli działa wolno - F5</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="mb">
+            <div class="col-3">
+                <div class="col-3 content">
+                    <span class="desc">
+                        Animacja przedstawia <a href="https://pl.wikipedia.org/wiki/Zbiór_Mandelbrota">zbiór Mandelbrota</a> 
+                        przedstawiony poprzez przybliżanie kwadratem o coraz mniejszym boku
+                    </span>
+                    <br>
+                    <label for="start-rect-size">Bok kwadratu startowego</label>
+                    <input type="text" id="start-rect-size" value="50">
+                    <label for="limit">Ilość iteracji jednym rozmiarem kwadratu</label>
+                    <input type="text" id="limit" value="640">
+                    <input type="button" value="Start" onclick="init();">
+                    <input type="button" value="Stop" onclick="end();">
+                    <p></p>
+                    Obecny rozmiar kwadratu: <span id="curr-rect-size"></span>
+                </div>
+                <canvas id="dis" width="800" height="800"></canvas>
+            </div>
+        </div>
+        <div class="row" id="j">
+            <div class="col-3">
+                <div class="col-3 content">
+                    <span class="desc">
+                        Animacja przedstawia iteracje <a href="https://pl.wikipedia.org/wiki/Zbiór_Julii">zbioru Julii</a> <br>
+                        dla <em>c = 
+                    </span>
+                    <input type="text" id="c-real" value="-0.8"> + 
+                    <input type="text" id="c-img" value="0.156"> i</em><br>
+                    <input type="button" value="Start" onclick="juliaStart();">
+                    <input type="button" value="Stop" onclick="juliaEnd();">
+                </div>
+                <p></p>
+                <canvas id="dis2" width="800" height="800"></canvas>
+            </div>
+        </div>
+        <div class="row" id="s">
+            <div class="col-3">
+                <div class="col-3 content">
+                    <span class="desc">
+                        Animacja przedstawia <a href="https://pl.wikipedia.org/wiki/Trójkąt_Sierpińskiego">trójkąt Sierpińskiego</a>
+                        <br>Użyj paska żeby zobaczyć konkretny poziom rekursji
+                    </span><br>
+                    <input type="button" value="&#9654; Start" id="start-btn" onclick="start();">
+                    <input type="button" value="&#9632; Stop" id="end-btn" onclick="endAnimation()">
+                    <input type="range" id="slider" name="slider"
+                    min="0" max="10" value="3" step="1" oninput="update();">
+                    <label for="myColor">Wybierz kolor: </label>
+                    <input type="color" id="myColor" value="#ff0000" oninput="changeColor();">
+                    <br>
+                    <label for="slider">Glębokość rekurencji: </label> 
+                    <span id="sliderText"></span>
+                </div>
+            </div>
+            <div class="col-3">
+                <canvas id="dis3" width="800" height="800"></canvas>
+            </div>
+        </div>
+    </body>
+</html>

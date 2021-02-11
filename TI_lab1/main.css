@@ -1,0 +1,67 @@
+.lil-table {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  margin-left: 5%;
+}
+
+.lil-table table {
+  -webkit-column-span: none;
+          column-span: none;
+  border: 1px solid black;
+  border-spacing: 0;
+}
+
+.lil-table table thead {
+  background: aqua;
+}
+
+.lil-table table tbody tr:nth-child(odd) {
+  background-color: greenyellow;
+}
+
+.lil-table table tbody tr:nth-child(1) {
+  background-color: violet;
+}
+
+.lil-table table tfoot tr:nth-child(1) {
+  background-color: violet;
+}
+
+.foot {
+  background-color: yellow;
+}
+
+.header-lab {
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-bottom: 20px;
+  border: 2px solid red;
+}
+
+.header-lab h3 {
+  text-align: center;
+  margin: 0;
+  display: block;
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+#video {
+  display: block;
+  width: 50%;
+  height: 90%;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.media {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+/*# sourceMappingURL=main.css.map */

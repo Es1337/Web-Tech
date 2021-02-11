@@ -1,0 +1,9 @@
+*.jpg
+*.jpeg
+*.png
+*/vendor
+*.db
+*.mp4
+*/node_modules
+package-lock.json
+package.json

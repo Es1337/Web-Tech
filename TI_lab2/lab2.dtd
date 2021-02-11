@@ -1,0 +1,11 @@
+<!ELEMENT biblioteka (dzial+)>
+<!ELEMENT dzial (nazwa-el, ksiazka+)>
+<!ATTLIST dzial
+          nazwa CDATA #REQUIRED>
+<!ELEMENT nazwa-el (#PCDATA)>
+<!ELEMENT ksiazka (autor+, tytul, cena)>
+<!ELEMENT autor (imie, nazwisko)>
+<!ELEMENT imie (#PCDATA)>
+<!ELEMENT nazwisko (#PCDATA)>
+<!ELEMENT tytul (#PCDATA)>
+<!ELEMENT cena (#PCDATA)>

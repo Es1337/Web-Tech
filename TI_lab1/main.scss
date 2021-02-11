@@ -1,0 +1,58 @@
+.lil-table {
+    flex: 50%;
+    margin-left: 5%;
+    table{
+        column-span: none;
+        border: 1px solid black;
+        border-spacing: 0;
+
+        thead {
+            background: aqua;
+        }
+        tbody {
+            tr:nth-child(odd){
+                background-color: greenyellow;
+            }
+            tr:nth-child(1){
+                background-color:violet;
+            }
+        }
+        tfoot {
+            tr:nth-child(1){
+                background-color: violet;
+            }
+        }
+    }
+}
+
+.foot{
+    background-color: yellow;
+}
+
+.header-lab {
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 20px;
+    border: 2px solid red;
+    h3{
+        text-align: center;
+        margin: 0;
+        display: block;
+        font-size: 1.5em;
+        font-weight: 200;
+    }
+}
+
+#video {
+    display: block;
+    width: 50%;
+    height: 90%;
+}
+
+.main {
+    display: flex;
+}
+
+.media {
+    flex: 50%;
+}

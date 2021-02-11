@@ -1,0 +1,36 @@
+table {
+	background-color: #e5ffe2;
+	thead {
+		background-color: #fa9790;
+	}
+	tbody {
+		
+		tr:nth-child(1){
+			color: black;
+		}
+	}
+	th {
+		text-align: center;
+		width: 33%;
+	}
+	td {
+		width: 33%;
+	}
+}
+
+
+a {
+	margin: 0 2 0 2;
+}
+
+.historyczne {
+	color: #0d8c24;
+}
+
+.albumy {
+	color: #0f45a8;
+}
+
+.reportaze {
+	color: #8b3312;
+}

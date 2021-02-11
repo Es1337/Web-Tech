@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type ="text/css" href="biblioteka.css"?>
+<!--<!DOCTYPE biblioteka SYSTEM "lab2.dtd">-->
+<biblioteka xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="lab2.xsd">
+  <dzial nazwa="historyczne">
+    <nazwa-el>
+      Historyczne
+    </nazwa-el>
+    <ksiazka>
+      <autor>
+        <imie>Karol</imie>
+        <nazwisko>Pączek</nazwisko>
+      </autor>
+      <tytul>Życie kmiecia polskiego w XIV wieku</tytul>
+      <cena>49</cena>
+    </ksiazka>
+    <ksiazka>
+      <autor>
+        <imie>Jan</imie>
+        <nazwisko>Kowalski</nazwisko>
+      </autor>
+      <tytul>Cokolwiek</tytul>
+      <cena>50</cena>
+    </ksiazka>
+    <ksiazka>
+      <autor>
+        <imie>Jan</imie>
+        <nazwisko>Kowalski</nazwisko>
+      </autor>
+      <autor>
+        <imie>Adam</imie>
+        <nazwisko>Kowalski</nazwisko>
+      </autor>
+      <tytul>Cokolwiek 2</tytul>
+      <cena>60</cena>
+    </ksiazka>
+  </dzial>
+  <dzial nazwa="albumy">
+    <nazwa-el>
+      Albumy
+    </nazwa-el>
+    <ksiazka>
+      <autor>
+        <imie>Igor</imie>
+        <nazwisko>Nowak</nazwisko>
+      </autor>
+      <tytul>Ptaki Polski</tytul>
+      <cena>35</cena>
+    </ksiazka>
+    <ksiazka>
+      <autor>
+        <imie>Anna</imie>
+        <nazwisko>Kołodziejczyk</nazwisko>
+      </autor>
+      <tytul>Paryż Nocą</tytul>
+      <cena>89</cena>
+    </ksiazka>
+  </dzial>
+  <dzial nazwa="reportaze">
+    <nazwa-el>
+      Reportaże
+    </nazwa-el>
+    <ksiazka>
+      <autor>
+        <imie>Piotr</imie>
+        <nazwisko>Kasztan</nazwisko>
+      </autor>
+      <tytul>Ja dzwunia z Bytumia... </tytul>
+      <cena>42</cena>
+    </ksiazka>
+  </dzial>
+</biblioteka>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="biblioteka">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="dzial" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dzial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nazwa-el" type="xs:string"/>
+        <xs:element ref="ksiazka" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="nazwa" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ksiazka">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="autor" maxOccurs="unbounded"/>
+        <xs:element name="tytul" type="xs:string"/>
+        <xs:element name="cena" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="autor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="imie" type="xs:string"/>
+        <xs:element name="nazwisko" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

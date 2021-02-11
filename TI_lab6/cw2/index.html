@@ -1,0 +1,95 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Test CGI</title>
+    <script type="text/javascript">
+        function validateHTML() {
+            document.getElementById("name-info").innerHTML = "";
+            document.getElementById("surname-info").innerHTML = "";
+            document.getElementById("year-info").innerHTML = "";
+            document.getElementById("email-info").innerHTML = "";
+            return nameCheck() && yearCheck() && mailCheck();
+        }
+
+        function nameCheck() {
+            var name = document.inputform.name.value;
+            var surname = document.inputform.surname.value;
+            var nameValid = true;
+            var surnameValid = true;
+            if(name.length < 4)
+            {
+                document.getElementById("name-info").innerHTML = "Name too short";
+                nameValid = false;
+            }
+            else if(surname.length < 4)
+            {
+                document.getElementById("surname-info").innerHTML = "Surname too short";
+                surnameValid = false;
+            }
+
+            return nameValid && surnameValid;
+        }
+        
+        function yearCheck() {
+            var year = document.inputform.year.value;
+            if(year == 0)
+            {
+                document.getElementById("year-info").innerHTML = "Choose a year";
+                return false;
+            }
+            else    
+                return true;
+        }
+
+        function mailCheck() {
+            var mail = document.inputform.email.value;
+            const regex = RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
+            
+            if(regex.test(mail))
+            {
+                return true;
+            }
+            else    
+                document.getElementById("email-info").innerHTML = "Wrong e-mail";
+                return false;
+        }
+
+    </script>
+    <style type="text/css">
+        .err-msg {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <form name="inputform" method="post" onsubmit="return validateHTML()">
+            <label for="surname">Nazwisko</label>
+            <input type="text" name="surname">
+            <div id="surname-info" class="err-msg"></div>
+            <br> 
+            <label for="name">Imię</label>
+            <input type="text" name="name">
+            <div id="name-info" class="err-msg"></div>
+            <br> 
+            <label for="email">E-Mail</label>
+            <input type="text" name="email">
+            <div id="email-info" class="err-msg"></div>
+            <br>
+            <label for="year">Rok studiów</label>
+            <select name="year">
+                <option value="0">Wybierz rok</option>
+                <option value="1">Rok 1</option>
+                <option value="2">Rok 2</option>
+                <option value="3">Rok 3</option>
+            </select>
+            <div id="year-info" class="err-msg"></div>
+            <br>
+            <label for="comments">Uwagi</label>
+            <input type="textarea" name="comments">
+            <br>  
+            <input class="submit-btn" type="submit"> 
+        </form> 
+    </fieldset> 
+</body> 
+</html>
